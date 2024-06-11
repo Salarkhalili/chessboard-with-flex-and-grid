@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  padding: 1rem;
+}
+.container {
+  max-width: 804px;
+  margin: 3rem auto;
+}
+.chessboard-table {
+  border: 1px solid burlywood;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.chessboard-table__header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(243, 186, 81, 0.425);
+}
+#chessboard-table__content {
+  width: 100%;
+  & > div {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  & .cell-dark {
+    background: rgb(0, 0, 0);
+  }
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  & .cell-dark {
+    background: rgb(99, 72, 36);
+  }
+}
+
+/* این روش جواب نمیداد */
+/* .grid > div:nth-child(2n + 1) {
+    background: rgb(99, 72, 36);
+  }
+  
+  .flex > div:nth-child(2n + 1) {
+    background: black;
+  } */
+
+@media screen and (max-width: 900px) {
+  .container {
+    max-width: 604px;
+  }
+  #chessboard-table__content {
+    & > div {
+      width: 75px;
+      height: 75px;
+    }
+  }
+}
+@media screen and (max-width: 650px) {
+  .container {
+    max-width: 504px;
+  }
+  #chessboard-table__content {
+    & > div {
+      width: 62.7px;
+      height: 62.7px;
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .container {
+    max-width: 264px;
+  }
+  #chessboard-table__content {
+    & > div {
+      width: 32.75px;
+      height: 32.75px;
+    }
+  }
+}

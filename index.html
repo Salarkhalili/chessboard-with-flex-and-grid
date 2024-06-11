@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chessboard with Flex and Grid</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="toggleSwitch.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="chessboard-table">
+        <section class="chessboard-table__header">
+          <h1>Chessboard display: <strong>Grid</strong></h1>
+          <div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="toggle-input" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </section>
+        <section id="chessboard-table__content" class="grid"></section>
+      </div>
+    </div>
+  </body>
+</html>
